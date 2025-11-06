@@ -1,6 +1,7 @@
 spring:
   datasource:
-    url: jdbc:jdbc:mysql://localhost:3306/ecommerce?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    ##url: jdbc:mysql://host.docker.internal:3306/ecommerce?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3307/ecommerce?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: root
     password: root
   jpa:
@@ -9,4 +10,10 @@ spring:
     show-sql: true
 
 server:
-  port: 8080
+  port: 8081
+myapp:
+  greeting: "Hello from Config Server!"
+customer:
+  default-name: "John Doe!"
+  max-orders: 15
+  greeting: "Welcome to Customer Service!"
